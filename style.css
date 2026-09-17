@@ -274,13 +274,15 @@ html, body {
 .engawa {
   position: fixed;
   z-index: 5;
-  left: 0;
-  right: 0;
+  /* Extend beyond the viewport so the tilted floor always reaches both edges. */
+  left: 50%;
+  width: calc(100% + 64px);
   bottom: 0;
   height: 9vh;
   min-height: 52px;
   pointer-events: none;
   perspective: 420px;
+  transform: translateX(-50%);
 }
 
 .engawa-floor {
